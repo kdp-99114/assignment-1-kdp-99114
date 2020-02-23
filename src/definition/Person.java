@@ -4,10 +4,7 @@ import java.util.ArrayList;
 
 public class Person {
     private String firstName;
-
     private String lastName;
-
-    private ArrayList<String> contactNumber = new ArrayList<>();
-
+    private ArrayList<Long> contactNumber;
     private String email;
 }
