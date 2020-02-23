@@ -7,6 +7,11 @@ public class ContactList implements ContactListADT {
     private Node head = null;
     private int size = 0;
 
+    private void addFirst(Person person) {
+        head = new Node(person, head);
+        size++;
+    }
+
     @Override
     public void add(Person person) {
 
