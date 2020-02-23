@@ -26,6 +26,10 @@ public class ContactList implements ContactListADT {
     private static class Node {
         private Person data;
         private Node next;
+
+        public Node(Person data) {
+            this.data = data;
+        }
     }
 
 }
