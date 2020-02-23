@@ -39,7 +39,7 @@ public class ContactList implements ContactListADT {
 
     @Override
     public void add(Person person) {
-
+        add(size, person);
     }
 
     @Override
