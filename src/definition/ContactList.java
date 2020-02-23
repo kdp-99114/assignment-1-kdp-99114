@@ -7,6 +7,15 @@ public class ContactList implements ContactListADT {
     private Node head = null;
     private int size = 0;
 
+    private Node getNode(int index) {
+        Node response = head;
+
+        for (int i = 0; i < index; i++) {
+            response = response.getNext();
+        }
+        return response;
+    }
+
     private void addFirst(Person person) {
         head = new Node(person, head);
         size++;
