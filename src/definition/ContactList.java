@@ -24,6 +24,8 @@ public class ContactList implements ContactListADT {
     }
 
     private static class Node {
+        private Person person;
+        private Node next;
     }
 
 }
