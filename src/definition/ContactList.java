@@ -12,6 +12,11 @@ public class ContactList implements ContactListADT {
         size++;
     }
 
+    private void addAfter(Node node, Person person) {
+        node.next = new Node(person, node.next);
+        size++;
+    }
+
     @Override
     public void add(Person person) {
 
