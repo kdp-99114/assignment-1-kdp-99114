@@ -22,4 +22,8 @@ public class ContactList implements ContactListADT {
     public Person remove(int index) {
         return null;
     }
+
+    private static class Node {
+    }
+
 }
