@@ -6,4 +6,6 @@ public interface ContactListADT {
     void add(Person person);
 
     void viewContact();
+
+    int searchContact(String firstName);
 }
