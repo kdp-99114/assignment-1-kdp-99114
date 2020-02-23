@@ -3,6 +3,10 @@ package definition;
 import adt.ContactListADT;
 
 public class ContactList implements ContactListADT {
+
+    private Node head = null;
+    private int size = 0;
+
     @Override
     public void add(Person person) {
 
