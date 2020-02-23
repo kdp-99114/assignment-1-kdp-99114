@@ -26,6 +26,17 @@ public class ContactList implements ContactListADT {
         size++;
     }
 
+    public void add(int index, Person person) {
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException(Integer.toString(index));
+        } else if (index == 0) {
+            addFirst(person);
+        } else {
+            Node temp = getNode(index - 1);
+            addAfter(temp, person);
+        }
+    }
+
     @Override
     public void add(Person person) {
 
