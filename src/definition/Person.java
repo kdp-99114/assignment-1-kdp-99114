@@ -1,7 +1,11 @@
 package definition;
 
-public class Person {
-    String firstName;
+import java.util.ArrayList;
 
-    String lastName;
+public class Person {
+    private String firstName;
+
+    private String lastName;
+
+    private ArrayList<String> contactNumber = new ArrayList<>();
 }
