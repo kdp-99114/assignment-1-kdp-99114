@@ -8,4 +8,6 @@ public interface ContactListADT {
     void viewContact();
 
     int searchContact(String firstName);
+
+    Person remove(int index);
 }
