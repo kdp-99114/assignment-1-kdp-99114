@@ -35,6 +35,14 @@ public class ContactList implements ContactListADT {
             this.data = data;
             this.next = next;
         }
+
+        public Person getData() {
+            return data;
+        }
+
+        public Node getNext() {
+            return next;
+        }
     }
 
 }
