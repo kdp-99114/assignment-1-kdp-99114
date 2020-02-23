@@ -8,4 +8,6 @@ public class Person {
     private String lastName;
 
     private ArrayList<String> contactNumber = new ArrayList<>();
+
+    private String email;
 }
