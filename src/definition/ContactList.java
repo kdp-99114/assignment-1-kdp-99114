@@ -30,6 +30,11 @@ public class ContactList implements ContactListADT {
         public Node(Person data) {
             this.data = data;
         }
+
+        public Node(Person data, Node next) {
+            this.data = data;
+            this.next = next;
+        }
     }
 
 }
