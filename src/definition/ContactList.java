@@ -73,8 +73,15 @@ public class ContactList implements ContactListADT {
     }
 
     @Override
-    public int searchContact(String firstName) {
-        return 0;
+    public String searchContact(String firstName) {
+        String response = "";
+        for (int i = 0; i < size; i++) {
+            Person person = this.getNode(i).getData();
+            if (firstName.equals(person.getFirstName())) {
+                response = response + i;
+            }
+        }
+        return response;
     }
 
     @Override
