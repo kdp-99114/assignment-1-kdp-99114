@@ -84,6 +84,19 @@ public class ContactList implements ContactListADT {
         return response;
     }
 
+    private Person removeFirst() {
+        Person response = null;
+        Node temp = head;
+        if (head != null) {
+            head = head.getNext();
+        }
+        if (temp != null) {
+            size--;
+            response = temp.getData();
+        }
+        return response;
+    }
+
     @Override
     public Person remove(int index) {
         return null;
