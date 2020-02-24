@@ -54,7 +54,10 @@ public class ContactList implements ContactListADT {
 
     public void viewContact(int index) {
         Person person = this.getNode(index).getData();
-
+        System.out.println("First Name: " + person.getFirstName() + '\n' +
+                "Last Name: " + person.getLastName() + '\n' +
+                (person.getContactNumber().size() > 1 ? "Contact Number(s): " : "Contact Number: ") + this.getContactNumber(person.getContactNumber()) + '\n' +
+                "Email address: " + person.getEmail());
     }
 
     @Override
