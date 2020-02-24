@@ -18,7 +18,7 @@ public class ContactListHelper {
         System.out.println("Please enter the name of the Person");
         System.out.print("First Name: ");
         String firstName = sc.nextLine();
-        System.out.println("Last Name: ");
+        System.out.print("Last Name: ");
         String lastName = sc.nextLine();
         char choiceContact = 'y';
         while (choiceContact != 'n') {
@@ -43,4 +43,24 @@ public class ContactListHelper {
             System.out.println("-------- * -------- * -------- * --------");
         }
     }
+
+    public void searchContactMenu(ContactList contactList) {
+        String firstName = sc.nextLine();
+        String index = contactList.searchContact(firstName);
+        String[] indexValues = new String[index.length()];
+        int individualIndex;
+        if (!index.equals("")) {
+            for (int i = 0; i < index.length(); i++) {
+                indexValues[i] = index.substring(i, i + 1);
+            }
+            for (String indexValue : indexValues) {
+                individualIndex = Integer.parseInt(indexValue);
+                System.out.println("-------- * -------- * -------- * --------");
+                contactList.viewContact(individualIndex);
+                System.out.println("-------- * -------- * -------- * --------");
+            }
+        }
+
+    }
 }
+
