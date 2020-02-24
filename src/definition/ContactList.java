@@ -124,7 +124,7 @@ public class ContactList implements ContactListADT {
 
     @Override
     public Person remove() {
-        return null;
+        return remove(size - 1);
     }
 
     private void swap(Node firstNode, Node secondNode) {
