@@ -42,6 +42,11 @@ public class ContactList implements ContactListADT {
         add(size, person);
     }
 
+    public void viewContact(int index) {
+        Person person = this.getNode(index).getData();
+        
+    }
+
     @Override
     public void viewContact() {
 
