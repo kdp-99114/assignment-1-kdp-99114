@@ -28,6 +28,7 @@ public class ContactListApp {
                     System.out.println("You have chosen to add a new contact:");
                     Person person = contactListHelper.addContactMenu();
                     contactList.add(person);
+                    contactList.sort();
                     break;
                 case 2:
                     System.out.println("---Here are all your contacts---");
