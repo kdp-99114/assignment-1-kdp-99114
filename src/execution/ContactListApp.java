@@ -16,6 +16,11 @@ public class ContactListApp {
                     "Press 5 to exit program ");
 
             choice = sc.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.println("You have chosen to add a new contact:");
+            }
         }
     }
 }
