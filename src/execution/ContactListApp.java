@@ -1,6 +1,7 @@
 package execution;
 
 import definition.ContactList;
+import definition.Person;
 import helper.ContactListHelper;
 
 import java.util.Scanner;
@@ -25,6 +26,9 @@ public class ContactListApp {
             switch (choice) {
                 case 1:
                     System.out.println("You have chosen to add a new contact:");
+                    Person person = contactListHelper.addContactMenu();
+                    contactList.add(person);
+                    break;
             }
         }
     }
