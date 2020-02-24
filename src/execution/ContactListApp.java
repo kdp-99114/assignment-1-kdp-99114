@@ -34,6 +34,10 @@ public class ContactListApp {
                     System.out.println("---Here are all your contacts---");
                     contactListHelper.viewContactMenu(contactList);
                     break;
+                case 3:
+                    System.out.println("You could search for a contact from their first names: ");
+                    contactListHelper.searchContactMenu(contactList);
+                    break;
             }
         }
     }
