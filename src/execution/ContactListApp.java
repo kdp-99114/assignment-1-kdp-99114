@@ -29,6 +29,10 @@ public class ContactListApp {
                     Person person = contactListHelper.addContactMenu();
                     contactList.add(person);
                     break;
+                case 2:
+                    System.out.println("---Here are all your contacts---");
+                    contactListHelper.viewContactMenu(contactList);
+                    break;
             }
         }
     }
