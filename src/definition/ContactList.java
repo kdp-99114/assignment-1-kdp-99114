@@ -108,8 +108,22 @@ public class ContactList implements ContactListADT {
         return response;
     }
 
-    @Override
     public Person remove(int index) {
+        Person response = null;
+        // check for valid index
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException(Integer.toString(index));
+        } else if (index == 0) { /* check if the index is zero*/
+            response = removeFirst();
+        } else {
+            Node previousNode = getNode(index - 1);
+            response = removeAfter(previousNode);
+        }
+        return response;
+    }
+
+    @Override
+    public Person remove() {
         return null;
     }
 
