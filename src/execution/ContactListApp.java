@@ -1,10 +1,15 @@
 package execution;
 
+import definition.ContactList;
+import helper.ContactListHelper;
+
 import java.util.Scanner;
 
 public class ContactListApp {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        ContactList contactList = new ContactList();
+        ContactListHelper contactListHelper = new ContactListHelper();
 
         int choice = 0;
         while (choice != 5) {
