@@ -62,7 +62,10 @@ public class ContactList implements ContactListADT {
 
     @Override
     public void viewContact() {
-
+        for (int i = 0; i < size; i++) {
+            viewContact(i);
+            System.out.println();
+        }
     }
 
     @Override
