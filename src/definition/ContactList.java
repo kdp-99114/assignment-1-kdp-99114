@@ -3,11 +3,14 @@ package definition;
 import adt.ContactListADT;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class ContactList implements ContactListADT {
 
     private Node head = null;
     private int size = 0;
+
+    Scanner sc = new Scanner(System.in);
 
     private Node getNode(int index) {
         Node response = head;
@@ -144,6 +147,17 @@ public class ContactList implements ContactListADT {
                 }
             }
         }
+    }
+
+    public Person deleteContactMenu() {
+        System.out.println("Here are all your contacts: ");
+        for (int i = 0; i < size; i++) {
+            System.out.println((i + 1) + "." + this.getNode(i).getData().getFirstName() + " " + this.getNode(i).getData().getLastName());
+        }
+        System.out.print("Press the number against the contact to delete it: ");
+        int index = sc.nextInt();
+        Person person = this.remove(index - 1);
+        return person;
     }
 
     private static class Node {
