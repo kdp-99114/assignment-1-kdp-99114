@@ -89,7 +89,16 @@ public class ContactList implements ContactListADT {
     }
 
     public void sort() {
-
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < (size - 1) - i; j++) {
+                Node firstNode = this.getNode(j);
+                Node secondNode = this.getNode(j + 1);
+                int compare = (firstNode.getData().getFirstName()).compareTo(secondNode.getData().getFirstName());
+                if (compare > 0) {
+                    swap(firstNode, secondNode);
+                }
+            }
+        }
     }
 
     private static class Node {
