@@ -82,6 +82,12 @@ public class ContactList implements ContactListADT {
         return null;
     }
 
+    private void swap(Node firstNode, Node secondNode) {
+        Node temp = firstNode;
+        firstNode = secondNode;
+        secondNode = temp;
+    }
+
     public void sort() {
 
     }
