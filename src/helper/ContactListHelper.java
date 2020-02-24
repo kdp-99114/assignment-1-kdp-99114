@@ -1,5 +1,6 @@
 package helper;
 
+import definition.ContactList;
 import definition.Person;
 
 import java.util.ArrayList;
@@ -33,5 +34,13 @@ public class ContactListHelper {
             email = sc.nextLine();
         }
         return new Person(firstName, lastName, contactNumber, email);
+    }
+
+    public void viewContactMenu(ContactList contactList) {
+        for (int i = 0; i < contactList.getSize(); i++) {
+            System.out.println("-------- * -------- * -------- * --------");
+            contactList.viewContact(i);
+            System.out.println("-------- * -------- * -------- * --------");
+        }
     }
 }
