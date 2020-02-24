@@ -18,6 +18,10 @@ public class ContactList implements ContactListADT {
         return response;
     }
 
+    public int getSize() {
+        return size;
+    }
+
     private void addFirst(Person person) {
         head = new Node(person, head);
         size++;
