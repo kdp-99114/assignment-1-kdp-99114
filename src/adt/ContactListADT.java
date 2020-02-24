@@ -9,5 +9,5 @@ public interface ContactListADT {
 
     String searchContact(String firstName);
 
-    Person remove(int index);
+    Person remove();
 }
