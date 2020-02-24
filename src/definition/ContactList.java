@@ -2,6 +2,8 @@ package definition;
 
 import adt.ContactListADT;
 
+import java.util.ArrayList;
+
 public class ContactList implements ContactListADT {
 
     private Node head = null;
@@ -42,9 +44,17 @@ public class ContactList implements ContactListADT {
         add(size, person);
     }
 
+    private String getContactNumber(ArrayList<Long> contactNumber) {
+        String conNum = "";
+        for (int i = 0; i < contactNumber.size(); i++) {
+            conNum = conNum + contactNumber.get(i) + (i < contactNumber.size() - 1 ? ", " : "");
+        }
+        return conNum;
+    }
+
     public void viewContact(int index) {
         Person person = this.getNode(index).getData();
-        
+
     }
 
     @Override
