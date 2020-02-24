@@ -82,6 +82,10 @@ public class ContactList implements ContactListADT {
         return null;
     }
 
+    public void sort() {
+
+    }
+
     private static class Node {
         private Person data;
         private Node next;
